@@ -5,19 +5,30 @@
     <script src="scripts/angular.js"></script>
     <title></title>
 </head>
-<body ng-app="myHalliburton">
-<div ng-controller="myHalliburtonCtrl">
+<body ng-app="myApp">
+
+<div ng-controller="myCtrl">
     <input type="text" ng-model="name" placeholder="Enter name">
     <button ng-click="addName()">Add</button>
-    <h1>List</h1>
+    <h1>List1</h1>
     <o1>
         <li ng-repeat="n in names">{{n}}</li>
     </o1>
 </div>
+
+<div ng-controller="myCtrl">
+    <input type="text" ng-model="name" placeholder="Enter name">
+    <button ng-click="addName()">Add</button>
+    <h1>List2</h1>
+    <ol>
+        <li ng-repeat="n in names">{{n}}</li>
+    </ol>
+</div>
+
 </body>
 <script>
-    var app = angular.module('myHalliburton',[]);
-    app.controller('myHalliburtonCtrl',function($scope){
+    var app = angular.module('myApp',[]);
+    app.controller('myCtrl',function($scope){
         $scope.names=[
             'Name 1',
             'Name 2'
