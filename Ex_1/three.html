@@ -28,7 +28,7 @@
 </body>
 <script>
     var app = angular.module('myApp',[]);
-    app.controller('myCtrl',function($scope){
+    app.controller('myCtrl',['$scope',function($scope){
         $scope.names=[
             'Name 1',
             'Name 2'
@@ -37,7 +37,7 @@
             $scope.names.push($scope.name);
         };
 
-    });
+    }]);
 </script>
 
 </html>

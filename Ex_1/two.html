@@ -17,7 +17,7 @@
 </body>
 <script>
     var app = angular.module('myHalliburton',[]);
-    app.controller('myHalliburtonCtrl',function($scope){
+    app.controller('myHalliburtonCtrl',['$scope',function($scope){
         $scope.names=[
             'Name 1',
             'Name 2'
@@ -26,7 +26,7 @@
             $scope.names.push($scope.name);
         };
 
-    });
+    }]);
 </script>
 
 </html>
