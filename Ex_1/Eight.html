@@ -121,6 +121,13 @@
                             }
                         }
                 )
+                        .state('state1.dynamic',{
+                            url:"/dynamic/{id}",
+                            template:"<h1>This is dynamic {{text}}</h1>",
+                            controller:function($scope,$stateParams){
+                                $scope.text=$stateParams.id;
+                            }
+                        })
                         .state('state2',{
                             url:"/state2",
                             templateUrl:"partials/state2.html"
