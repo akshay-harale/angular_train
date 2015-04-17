@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-ui-router.js"></script>
+    <title>Example Controller service, directive, routing</title>
+</head>
+<body ng-app="myApp">
+
+<div ng-controller="myCtrl">
+    <h1>Synerzip</h1>
+    <a ui-sref="state1">state1</a>|
+    <a ui-sref="state2">state2</a>|
+    <br>
+    <h2>content</h2>
+    <div ui-view></div>
+    <hr>
+    <h2>footer</h2>
+</div>
+
+
+
+</body>
+
+<script>
+    var app =angular.module('myApp',['ui.router']);
+    app.factory("myService",[function(){
+        return({
+            items:[
+                'Name 1',
+                'Name 2',
+                'SUNDAY'
+            ],
+            addName: function(name){
+                this.items.push(name);
+            }
+        })
+    }]);
+
+    app.controller('myCtrl',['$scope','$filter','myService','$window',function($scope,$filter,myService,$window){
+
+        $scope.addName=function(){
+            var capName=$filter('capFilter')($scope.name);
+            $window.alert(capName);
+            myService.addName(capName);
+            $scope.name='';
+        };
+
+        $scope.names=myService.items;
+    }]);
+
+    app.filter('myFilter',[function(){
+        var filter = function(items){
+            var filtered=[];
+            for(var i=0;i<items.length;i++){
+                var item = items[i];
+                if(item.search(/DAY/)!=-1){
+                    filtered.push(item);
+                }
+            }
+            return filtered;
+        }
+        return filter;
+    }]);
+
+    app.filter('capFilter',function(){
+        return function(text){
+            return text.toString().toUpperCase();
+        }
+    });
+
+
+    app.directive('myList',function(){
+        return{
+            template: '<ol>'+
+            '<li ng-repeat="n in names" ng-bind="n">'
+            +'</li>'+
+            '</ol>'
+        };
+    });
+
+    app.directive('myList1',function(){
+        return{
+            templateUrl: "myTemplate.html"
+        };
+    });
+    app.directive('myElement',function(){
+        return {
+            scope:{
+                text: '=info'
+            },
+            template: '<span>Item - {{text}} </span>'
+        }
+    });
+
+    app.config(function($stateProvider,$urlRouterProvider){
+                $urlRouterProvider.otherwise("state1/list");//by default route to ste 1
+
+                $stateProvider
+                        .state('state1',{
+                            url:"/state1",
+                            templateUrl:"partials/state1.html"
+                        }
+
+                )
+                        .state('state1.list',{
+                            url:"/list",
+                            templateUrl:"partials/state1.list.html",
+                            controller:function($scope){
+                                $scope.items=["list item1","item2","item3"]
+                            }
+                        }
+
+                )
+                        .state('state1.table',{
+                            url:"/table",
+                            templateUrl:"partials/state1.table.html",
+                            controller:function($scope){
+                                $scope.items=["Table item1","table item2","table item3"]
+                            }
+                        }
+                )
+                        .state('state1.dynamic',{
+                            url:"/dynamic/{id}",
+                            template:"<h1>This is dynamic {{text}}</h1>",
+                            controller:function($scope,$stateParams){
+                                $scope.text=$stateParams.id;
+                            }
+                        })
+                        .state('state2',{
+                            url:"/state2",
+                            templateUrl:"partials/state2.html"
+                        }
+
+                )
+                        .state('state2.list',{
+                            url:"/li"
+                        }
+                )
+            }
+
+    )
+</script>
+</html>
