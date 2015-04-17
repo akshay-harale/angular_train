@@ -1,33 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e7f415d-6406-4589-9cdc-7598aaf2c60b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ex_2/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ex_2/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ex_2/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ex_2/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ex_2/partials/about.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ex_2/scripts/angular-ui-router.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ex_2/scripts/angular.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ex_2/css/bootstrap-theme.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ex_2/css/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ex_2/css/bootstrap-theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ex_2/css/bootstrap.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ex_2/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ex_2/scripts/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ex_2/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ex_2/scripts/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ex_2/partials/contact.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ex_2/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ex_2/partials/home.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ex_2/scripts/npm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ex_2/one.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Ex_2/test.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Ex_1/Eight.html" afterPath="$PROJECT_DIR$/Ex_1/Eight.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Ex_1/partials/state1.html" afterPath="$PROJECT_DIR$/Ex_1/partials/state1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/training.log" afterPath="$PROJECT_DIR$/training.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="1e7f415d-6406-4589-9cdc-7598aaf2c60b" name="Default" comment="" />
     <ignored path="angular_train.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
